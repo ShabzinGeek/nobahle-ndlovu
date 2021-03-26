@@ -912,7 +912,7 @@
                     </form>
 
                      <script type="text/javascript">                
-                $('.contactForm').on('submit',function(e){
+                $('#contactForm').on('submit',function(e){
                     //optional validation code here
               
                     e.preventDefault();
@@ -921,11 +921,11 @@
                         url: "https://script.google.com/macros/s/AKfycby6xqDIQFudTbH_E7GAwskatoclDvIkMjMwoekdOCD5xdqxLndMtNbZbm9Y94TuICa4Vg/exec",
                         method: "POST",
                         dataType: "json",
-                        data: $(".contactForm").serialize(),
+                        data: $("#contactForm").serialize(),
                         success: function(response) {
                             
                             if(response.result == "success") {
-                                $('.contactForm')[0].reset();
+                                $('#contactForm')[0].reset();
                                 alert('Thank you for contacting us.');
                                 return true;
                             }
